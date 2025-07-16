@@ -273,6 +273,7 @@ footer textarea{
     border-radius: 5px;
     background-color: white;
     display: block;
+    resize: none;
     width: 100%;
     font-size: 18px;
     padding: 15px 30px;
@@ -289,4 +290,61 @@ footer textarea{
 
 .footer-column div a{
     margin-right: 10px;
+}
+
+
+/* Responsive Media query */
+@media screen and (max-width: 576px) {
+    .skills-container, 
+    .resume-container, 
+    footer, 
+    .about-items,
+    .banner,
+    nav,
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav > ul{
+        gap: 20px;
+    }
+
+    nav ul li{
+        margin-right: 0;
+    }
+
+    button{
+        margin: 0;
+    }
+
+    .banner{
+        margin: 20px;
+    }
+
+    .banner img{
+        width: 100%;
+    }
+
+    .header{
+        background-image: none;
+    }
+
+    footer,.about, .speacial{
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    footer input[type="text"],
+    footer input[type="email"], 
+    footer textarea{
+        width: calc(100% - 60px);
+    }
+}
+
+/* tablet specific media query */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .banner{
+        flex-direction: column;
+    }
 }
